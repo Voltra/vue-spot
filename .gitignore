@@ -1,3 +1,7 @@
+.env
+.brackets.json
+package-lock.json
+demo/
 
 # Created by https://www.gitignore.io/api/vue,vim,node,vuejs,intellij,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=vue,vim,node,vuejs,intellij,visualstudiocode

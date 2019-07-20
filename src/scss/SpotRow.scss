@@ -1,0 +1,10 @@
+@import "./dim";
+
+.spotRow{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    
+    @extend .w-full;
+    @extend .h-full;
+}

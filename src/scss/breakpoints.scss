@@ -1,0 +1,26 @@
+$breakpoints: (
+    xs: 0px,
+    s: 500px,
+    m: 768px,
+    l: 1000px,
+    xl: 1200px,
+    xxl: 1400px
+) !default;
+
+@mixin breakpoint($breakpoint: m){
+    @if not map-has-key($breakpoints, $breakpoint){
+        @error "Cannot find breakpoint '#{$breakpoint}'";
+    }@else{
+        $bp: map-get($breakpoints, $breakpoint);
+        
+        @if type-of($bp) != "number"{
+            @error "The breakpoint must be a number, got '#{$bp}'";
+        }@else{
+            
+			@media screen and (min-width: $bp){
+				@content;
+			}
+            
+        }
+    }
+}

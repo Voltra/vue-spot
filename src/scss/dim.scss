@@ -1,0 +1,73 @@
+@import "./breakpoints";
+
+.rw-full{
+    width: 100vw;
+}
+.w-full{
+    width: 100%;
+}
+
+.rh-full{
+    height: 100vh;
+}
+.h-full{
+    height: 100%;
+}
+
+.rfull{
+    @extend .rw-full;
+    @extend .rh-full;
+}
+
+.full{
+    @extend .w-full;
+    @extend .h-full;
+}
+
+@mixin bootGrid($gridWidth: 12, $gridHeight: 12){
+    @for $x from 1 through $gridWidth{
+        .rw#{$x}{
+            width: $x / $gridWidth  * 100vw;
+        }
+
+        .w#{$x}{
+            width: $x / $gridWidth * 100%;
+        }
+        
+        
+        @each $breakpoint, $value in $breakpoints{
+            @include breakpoint($breakpoint){
+                .rw#{$x}-#{$breakpoint}{
+                    width: $x / $gridWidth  * 100vw;
+                }
+            
+                .w#{$x}-#{$breakpoint}{
+                    width: $x / $gridWidth  * 100%;
+                }
+            }
+        }
+    }
+
+    @for $y from 1 through $gridHeight{
+        .rh#{$y}{
+            height: $y / $gridHeight * 100vh;
+        }
+
+        .h#{$y}{
+            height: $y / $gridHeight * 100%;
+        }
+        
+        
+        @each $breakpoint, $value in $breakpoints{
+            @include breakpoint($breakpoint){
+                .rh#{$y}-#{$breakpoint}{
+                    height: $y / $gridHeight * 100vh;
+                }
+
+                .h#{$y}-#{$breakpoint}{
+                    height: $y / $gridHeight * 100%;
+                }
+            }
+        }
+    }
+}

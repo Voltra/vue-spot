@@ -1,0 +1,13 @@
+@import "./breakpoints";
+@import "./dim";
+@import "./Spot";
+@import "./SpotRow";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    @extend .rfull;
+    overflow: auto;
+}

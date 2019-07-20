@@ -2,9 +2,12 @@
   "name": "vue-spot",
   "version": "1.0.0",
   "description": "A Vue based grid system",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npx webpack --colors --watch",
+    "build": "npx webpack --colors",
+    "start": "npm run watch",
+    "setup": "npm i"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,38 @@
   "bugs": {
     "url": "https://github.com/Voltra/vue-spot/issues"
   },
-  "homepage": "https://github.com/Voltra/vue-spot#readme"
+  "homepage": "https://github.com/Voltra/vue-spot#readme",
+  "dependencies": {
+    "camelcase": "^5.3.1",
+    "dotenv": "^8.0.0",
+    "kebab-case": "^1.0.0",
+    "sequency": "^0.19.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-jsx-v-model": "^2.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-do-expressions": "^6.22.0",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "core-js": "^3.1.4",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "img-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "regenerator-runtime": "^0.13.3",
+    "remove-files-webpack-plugin": "^1.1.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
 }

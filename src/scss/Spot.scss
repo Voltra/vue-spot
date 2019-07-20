@@ -1,0 +1,8 @@
+@import "./dim";
+
+.spot{
+    flex: 1 1 0;
+    
+    @extend .w-full;
+    @extend .h-full;
+}
