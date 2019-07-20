@@ -84,9 +84,11 @@ export default function(width = 12, height = 12){
                 separator: " ",
             });*/
         
-        return classes
-            .filter(clazz => !!this[tr(clazz)])
-            .join(" ");
+        const c = classes
+            .filter(clazz => !!this[tr(clazz)]);
+        
+        c.sort();
+        return c.join(" ");
     };
     
     return mixin;

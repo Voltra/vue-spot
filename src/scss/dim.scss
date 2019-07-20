@@ -25,7 +25,7 @@
 }
 
 @mixin bootGrid($gridWidth: 12, $gridHeight: 12){
-    @for $x from 1 through $gridWidth{
+    @for $x from $gridWidth through 1{
         .rw#{$x}{
             width: $x / $gridWidth  * 100vw;
         }
@@ -48,7 +48,7 @@
         }
     }
 
-    @for $y from 1 through $gridHeight{
+    @for $y from $gridHeight through 1{
         .rh#{$y}{
             height: $y / $gridHeight * 100vh;
         }
