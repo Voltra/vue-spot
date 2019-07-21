@@ -27,17 +27,27 @@ export default function(width = 12, height = 12){
         "w-full",
         "h-full",
         "full",
+        
+        "flex",
+        "flex-item",
+        "flex-item--auto",
+        "flex-col",
+        "nowrap",
+        
+        
+        "vcenter",
+        "hcenter",
+        "center",
+        
+        "top",
+        "right",
+        "bottom",
+        "left",
     ];
     
     for(const breakpoint of breakpoints){
-        classes.push(
-            `rw-full-${breakpoint}`,
-            `rh-full-${breakpoint}`,
-            `rfull-${breakpoint}`,
-            `w-full-${breakpoint}`,
-            `h-full-${breakpoint}`,
-            `full-${breakpoint}`,
-        );
+        classes.map(c => `${c}-${breakpoint}`)
+        .forEach(c => classes.push(c));
     }
     
     for(let x = 1 ; x <= width ; ++x){

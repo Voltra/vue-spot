@@ -1,8 +1,8 @@
 @import "./dim";
+@import "./display";
 
 .spot{
-    flex: 0 auto;
-    
+    @extend .flex-item;    
     @extend .w-full;
     @extend .h-full;
 }

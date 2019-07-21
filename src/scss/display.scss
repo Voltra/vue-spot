@@ -1,0 +1,115 @@
+@import "./breakpoints";
+
+.flex{    
+    display: flex;
+    flex-flow: row wrap;
+    
+    
+    
+    &-item{
+        flex: 0 auto;
+        &--auto{
+            flex: 1 1 0;
+        }
+    }
+    
+    &-col{
+        flex-flow: column wrap;
+    }
+}
+
+.nowrap{
+    flex-wrap: nowrap;
+}
+    
+.vcenter{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.hcenter{
+    display: flex;
+    justify-content: center
+}
+
+.center{
+    @extend .vcenter;
+    @extend .hcenter;
+}
+
+.left{
+    justify-content: flex-start;
+}
+.right{
+    justify-content: flex-end;
+}
+
+.top{
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.bottom{
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+@each $bp, $value in $breakpoints{
+    @include breakpoint($bp){
+        .flex-#{$bp}{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .flex-item-#{$bp}{
+            flex: 0 auto;
+        }
+        
+        .flex-item--auto#{$bp}{
+            flex: 1 1 0;
+        }
+        
+        .flex-col-#{$bp}{
+            flex-flow: column wrap;
+        }
+        
+        .hcenter-#{$bp}{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .vcenter-#{$bp}{
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .center-#{$bp}{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .nowrap-#{$bp}{
+            flex-wrap: nowrap;
+        }
+        
+        
+        .left-#{$bp}{
+            justify-content: flex-start;
+        }
+        .right-#{$bp}{
+            justify-content: flex-end;
+        }
+        
+        .top-#{$bp}{
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+        .bottom-#{$bp}{
+            align-items: flex-end;
+            align-content: flex-end;
+        }
+    }
+}

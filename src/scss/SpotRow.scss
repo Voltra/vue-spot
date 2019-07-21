@@ -1,11 +1,12 @@
 @import "./dim";
+@import "./display";
 
 .spotRow{
     position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
+    
+    @extend .flex;
+    @extend .top;
+    @extend .left;
     
     @extend .w-full;
     @extend .h-full;
