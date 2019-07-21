@@ -38,6 +38,7 @@ export default function(width = 12, height = 12){
         "vcenter",
         "hcenter",
         "center",
+        "evenly",
         
         "top",
         "right",

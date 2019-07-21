@@ -9,7 +9,7 @@ import SpotRow from "@components/SpotRow"
 if(typeof window != "undefined" && window.Vue)
     Vue.use(plugin, {mixin: true});
 
-const VueSlot = {
+const VueSpot = {
     plugin,
     sizings,
     Spot,
@@ -17,6 +17,6 @@ const VueSlot = {
 };
 
 if(typeof window != "undefined")
-    window.VueSlot = VueSlot;
+    window.VueSpot = VueSpot;
 
-export default VueSlot
+export default VueSpot

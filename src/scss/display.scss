@@ -33,6 +33,13 @@
     justify-content: center
 }
 
+.evenly{
+    justify-content: space-around;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-content: space-evenly;
+}
+
 .center{
     @extend .vcenter;
     @extend .hcenter;
@@ -89,6 +96,13 @@
             justify-content: center;
             align-items: center;
             align-content: center;
+        }
+        
+        .evenly-#{$bp}{
+            justify-content: space-around;
+            justify-content: space-evenly;
+            align-content: space-around;
+            align-content: space-evenly;
         }
         
         .nowrap-#{$bp}{
